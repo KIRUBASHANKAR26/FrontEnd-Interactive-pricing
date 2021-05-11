@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    background: hsl(230, 100%, 99%) url(./images/bg-pattern.svg) no-repeat;
+    background-position-x:100%;
+    background-size: 100% auto;
+
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    min-height: 100vh;
+    width: 100%;
+    
+}
+/* input range style */
+
+  input[type=range] {
+    height: 8px;
+    border: none;
+    -webkit-appearance: none;
+    background: linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) 50%, hsl(224, 65%, 95%) 50%, hsl(224, 65%, 95%) 100%);
+    border-radius: 1rem;
+    width: 100%;
+    margin: 3rem 0;
+    cursor: pointer;
+    flex: 100%;
+    order: 3;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #828282;
+    border: 1px solid #8A8A8A;
+    height: 38px;
+    width: 38px;
+    border-radius: 38px;
+    background:hsl(174, 86%, 45%) url(./images/icon-slider.svg) no-repeat;
+    box-shadow: hsl(174, 86%, 45%) 0px 14px 40px 2px;
+    cursor:grab;
+    -webkit-appearance: none;
+    margin-top: -16px;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #828282;
+    border: none;
+    height: 38px;
+    width: 38px;
+    border-radius: 38px;
+    background:hsl(174, 86%, 45%) url(./images/icon-slider.svg) no-repeat;
+    background-position:center;
+    box-shadow: hsl(174, 86%, 45%) 0px 14px 40px 2px;
+    cursor:grab;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 1px #828282;
+    border: 1px solid #8A8A8A;
+    height: 38px;
+    width: 38px;
+    border-radius: 38px;
+    background:hsl(174, 86%, 45%) url(./images/icon-slider.svg) no-repeat;
+    box-shadow: hsl(174, 86%, 45%) 0px 14px 40px 2px;
+    cursor:grab;
+  }
+
+  /* END---input range */
+  .container{
+    background: #fff;
+    padding: 3rem 3rem 0 3rem;
+    border-radius: .5rem;
+    color: hsl(225, 20%, 60%);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+  .container > div:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    flex-wrap: wrap;
+  }
+  .container > div:first-child p{
+    font-weight: 700;
+    width: 200px;
+  }
+  .billing-wrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    gap: 1rem;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+  }
+  .billing-wrapper label{
+    cursor: pointer;
+  }
+  .billing-wrapper p:hover{
+    color: hsl(227, 55%, 32%);
+    text-shadow:5px 5px 10px hsl(224, 65%, 95%);
+  }
+  input[type = checkbox]{
+    display: none;
+  }
+  .btn{
+    position: relative;
+    width: 3rem;
+    height: 1.4rem;
+    border-radius: 1rem;
+  }
+  .btn::before{
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 1.4rem;
+    background-color: hsl(223, 50%, 87%);
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition:all 0.3s;
+  }
+  .btn::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: #fff;
+    top: .2rem;
+    left: 5px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  #btn:checked ~ .btn::after{
+    transform: translateX(1.5rem);
+  }
+  #btn:checked ~ .btn::before{
+    background-color: hsl(174, 77%, 80%);
+  }
+  .billing-wrapper label{
+    display: inline-flex;
+    gap: .5rem;
+  }
+  header{
+    text-align: center;
+    padding-bottom: 5rem;
+    padding-top:1.8rem;
+    background:center 0 url(./images/pattern-circles.svg) no-repeat;
+  }
+  header > h1{
+    font-size: 2rem;
+    color: hsl(227, 35%, 25%);
+  }
+  header > p{
+    font-size: 1rem;
+    color: hsl(227, 35%, 25%); 
+    opacity: 70%;
+    margin-top: 1rem; 
+  }
+  #page-views{
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  #price{
+    font-size: 2.5rem;
+    color: hsl(227, 35%, 25%);
+    font-weight: 700;
+  }
+  .discount-wrapper p{
+    display: inline-block;
+  }
+  .discount-wrapper label p:last-child{
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    padding: .2rem .5rem;
+    font-size: .7rem;
+    border-radius: 1rem;
+  }
+  .start-my-trial-btn{
+    margin: 0 -3rem;
+    border-top: 1px solid  hsl(224, 65%, 95%);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    gap: 12rem;
+  }
+  .start-my-trial-btn p::before{
+    content: "";
+    background:center .5rem url(./images/icon-check.svg) no-repeat;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    display: inline-block;
+  }
+  .start-my-trial-btn button{
+    height: 2rem;
+    padding: 0 2rem;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: hsl(227, 35%, 25%);
+    cursor: pointer;
+  }
+  .start-my-trial-btn p{
+    margin-bottom: .5rem;
+  }
+  .start-my-trial-btn button:active{
+    transform: scale(1.1);
+  }
+@media screen and (max-width:40rem){
+  main{
+    padding: 0 1.5rem;
+  }
+  .container{
+    width: 100%;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+  .container > div:first-child{
+    display: block;
+    text-align: center;
+  }
+  .discount-wrapper p span{
+    display: none;
+  }
+  .billing-wrapper{
+    padding-left: 0;
+    display: flex;
+    font-size: 11px;
+    gap: .5rem;
+    margin-top: 1rem;
+  }
+  .start-my-trial-btn {
+    display: block;
+    text-align: center;
+  }
+  .start-my-trial-btn button{
+    margin-top: 1rem;
+  }
+  .container > div:first-child p{
+    width: unset;
+  }
+  body{
+    background-size: 100% 50%;
+  }
+}
+  
+  
+  
+  
+  
