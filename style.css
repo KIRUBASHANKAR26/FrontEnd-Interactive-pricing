@@ -221,6 +221,10 @@ main{
   .start-my-trial-btn button:active{
     transform: scale(1.1);
   }
+  .btn:focus{
+    -webkit-box-shadow: 0 0 1px 2px white, 0 0 1px 4px #10d5c2;
+    box-shadow: 0 0 1px 2px white, 0 0 1px 4px #10d5c2;
+  }
 @media screen and (max-width:40rem){
   main{
     padding: 0 1.5rem;
