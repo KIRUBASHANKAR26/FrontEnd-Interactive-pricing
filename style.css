@@ -46,6 +46,7 @@ main{
     width: 38px;
     border-radius: 38px;
     background:hsl(174, 86%, 45%) url(./images/icon-slider.svg) no-repeat;
+    background-position:center;
     box-shadow: hsl(174, 86%, 45%) 0px 14px 40px 2px;
     cursor:grab;
     -webkit-appearance: none;
